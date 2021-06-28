@@ -4,10 +4,7 @@
 
 #定义父类，Hero
 class Hero:
-    '''
-    #类变量，hp代表血量
-    #类变量，power代表攻击力
-    '''
+    #类变量，hero_name
     hero_name=''
     def __init__(self,hero_hp,hero_power):
         self.hero_hp = hero_hp
@@ -23,7 +20,7 @@ class Hero:
         hero_final_hp=self.hero_hp -enemy_power
         enemy_final_hp=enemy_hp - self.hero_power
         if hero_final_hp>enemy_final_hp:
-            ##通过self.类变量去调用 类中的类变量 self.hero_name
+            #通过self.类变量去调用 类中的类变量 self.hero_name
             print (f"英雄{self.hero_name}获胜")
         elif hero_final_hp<enemy_final_hp:
             print (f"敌人{enemy_name}获胜")
