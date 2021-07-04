@@ -5,6 +5,11 @@
 
 
 
+    ├── datas  (数据驱动文件夹）
+        └── calc.yaml (测试数据）
+        
+
+
 
 
 leixueqi@bogon 3_pytest_homework % tree
