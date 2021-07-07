@@ -52,6 +52,10 @@ class AddMemberPage(SeleniumDriver):
 
     @allure.step('判断"是否进入添加成员界面"')
     def is_in_add_member_page(self):
-        if not WebDriverWait(self.driver, 5, 0.5).until(expected_conditions.visibility_of_element_located(AddMemberObject.memberAdd_acctid)):
-            raise AssertionError('点击"添加成员"，进入"添加成员页面"失败！')
+        if  WebDriverWait(self.driver, 5, 0.5).until(expected_conditions.visibility_of_element_located(AddMemberObject.memberAdd_acctid)):
+            return True
+        else:
+            return False
+
+
 
