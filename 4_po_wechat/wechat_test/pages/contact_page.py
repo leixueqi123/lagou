@@ -54,8 +54,7 @@ class ContactPage(SeleniumDriver):
 
     @allure.step('判断"是否进入通讯录界面"')
     def is_in_contact_page(self):
-        if  WebDriverWait(self.driver, 5, 0.5).until(
-                expected_conditions.visibility_of_element_located(ContactObject.add_member)):
+        if  WebDriverWait(self.driver, 5, 0.5).until(expected_conditions.visibility_of_element_located(ContactObject.add_member)):
             return True
         else:
             return False
