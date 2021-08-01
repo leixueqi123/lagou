@@ -12,12 +12,12 @@ testcase/ 存放测试用例 test_contact.py
 log/ 日志 report/ 报告 data/ 数据 util/ 公共方法 .....
 
 
-## po封装
+
 
 第二层 1、填充内容 。 2、在每个page页面中 ，接收上个页面传递过来的 driver
 
 
-## po封装
+
 
 第三层改造优化
 
@@ -29,7 +29,7 @@ log/ 日志 report/ 报告 data/ 数据 util/ 公共方法 .....
 
 2、优化 find 方法 3、添加日志
 
-## po封装
+
 
 第四层 复用driver
 
@@ -45,13 +45,16 @@ log/ 日志 report/ 报告 data/ 数据 util/ 公共方法 .....
 
 
 第六层 多设备执行，多appium server
+
+
 端口号间隔2 
 
 appium -p 4723 --session-override
 appium -p 4725 --session-override
 udid  测试多设备唯一标示
 
-
+-----------------------------
+XXXX方式一：
 执行命令 shell
 mac/linux电脑： 
 第一台设备：
@@ -86,6 +89,7 @@ port = os.getenv("port")
 
 ----------------------
 
+XXXX方式二：
 执行命令 shell
 mac/linux电脑/windows： 
 python -m pytest test_contact.py --udid='123456' --port=4725
