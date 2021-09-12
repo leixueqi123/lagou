@@ -4,7 +4,7 @@ import pytest
 import time
 import subprocess
 import os
-import sys
+
 '''
 执行文件
 调用方法：python run.py 

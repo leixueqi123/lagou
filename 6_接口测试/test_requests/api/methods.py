@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import requests
 import allure
-
+import os
 class Methods(object):
     url = "https://httpbin.ceshiren.com/"
 
@@ -26,3 +26,10 @@ class Methods(object):
         # 返回r,数据格式不固定，可能是xml(webservice)，json,
         return r
 
+    @allure.step(f'{url}/upload')
+    def upload(self,file):
+        print (file)
+        file = {"file":file}
+        r = requests.post(f"{self.url}/post",files=file)
+        # 返回r,数据格式不固定，可能是xml(webservice)，json,
+        return r

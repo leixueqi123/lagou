@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 from test_requests.api.methods import Methods
 import json
+import os
 
 class TestHttpRequets:
 
@@ -36,3 +37,10 @@ class TestHttpRequets:
         # print (type(r.json().get("args")))
         # print (type(params))
         assert (r.json().get("args")==params)
+
+    def testUpload(self):
+        file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'result.png')
+        r = self.httpMethods.upload(file)
+        assert r.status_code == 200
+
+
